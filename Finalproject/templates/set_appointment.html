@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Setup Appointments
+{% endblock %}
+
+{% block main %}
+    <form action="/set_appointment" method="post">
+
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="name" placeholder="name" type="text" required>
+        </div>
+        
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="date" placeholder="date" type="text" required>
+        </div>
+
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="address" placeholder="address" type="text" required>
+        </div>
+
+        <button class="btn btn-dark" type="submit">Done</button>
+{% endblock %}

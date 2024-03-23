@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Teams List
+{% endblock %}
+
+{% block main %}
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th class="text-start">Teams</th>
+            <th class="text-end">City</th>
+            <th class="text-end"></th>
+        </tr>
+    </thead>
+   <tbody>
+    {% for team in teams %}
+    <tr>
+        <th class="text-start">{{ team['name'] }}</th>
+        <th class="text-end">{{ team['city'] }}</th>
+        <th class="text-end"></th>
+    </tr>
+    {% endfor %}
+   </tbody>
+</table>
+<form action="/set_appointment" method="get">
+    <button class="btn btn-dark" type="submit">Setup an appointment</button>
+</form>
+{% endblock %}
