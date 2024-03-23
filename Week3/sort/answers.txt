@@ -1,0 +1,17 @@
+sort1 uses: Bubble Sort
+
+
+How do you know?: Because its relatively faster on a sorted file than on a random file.
+
+
+sort2 uses:Merge Sort
+
+
+How do you know?: Because the running time is relatively faster than when applying sort1 and sort3 on the same files.
+
+
+sort3 uses: Selection Sort
+
+
+How do you know?: Because it takes equal amount of time when tested on a random and sorted file.
+
