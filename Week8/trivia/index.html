@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+
+            // Part one correct
+            document.addEventListener('DOMContentLoaded',function (){
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function() {
+                    correct.style.backgroundColor = "green";
+                    document.querySelector('#answer1').innerHTML = "Correct!";
+                });
+
+                // incorect
+                let incorrect = document.querySelectorAll(".incorrect");
+                for (let i = 0; i < incorrect.length; i++){
+                    incorrect[i].addEventListener('click', function() {
+                    incorrect[i].style.backgroundColor = "red";
+                    document.querySelector('#answer1').innerHTML = "Incorrect!";
+                });
+                }
+
+            // Incorrect
+            document.querySelector("#check").addEventListener("click", function() {
+                let input = document.querySelector("input");
+
+                if(input.value.toLowerCase() == "ethiopia"){
+                    input.style.backgroundColor = "green";
+                    document.querySelector('#answer2').innerHTML = "Correct!";
+                } else {
+                    input.style.backgroundColor = "red";
+                    document.querySelector('#answer2').innerHTML = "Incorrect!";
+                }
+            });
+
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>Who is the greatest football player of all time?</h3>
+                <button class= "incorrect" type="text">Maradona</button>
+                <button class= "incorrect" type="text">Pele</button>
+                <button class= "incorrect" type="text">Messi</button>
+                <button class= "correct" type="text">Ronaldo</button>
+
+                <p id="answer1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr> <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the only African country that was not colonised?</h3>
+                <form>
+                    <input type ="text" placeholder ="Country">
+                    <button id="check">Check Answer</button>
+
+                    <p id="answer2"></p>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

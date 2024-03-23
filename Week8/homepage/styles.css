@@ -1,0 +1,41 @@
+.header{
+    line-height: 2.9;
+    word-spacing: 100px;
+    background-color: #800000;
+    color: gray;
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+#cat img {
+    width: 400px;
+    height: auto;
+    margin-left: 200px;
+    margin-top: 200px;
+    border: 10px solid maroon;
+}
+
+.main {
+    background-color: #808080;
+}
+
+#hi {
+    color: maroon;
+    font-size: 70px;
+    margin-left: 600px;
+    margin-top: 40px;
+}
+
+#contact {
+    color: maroon;
+    font-size: 20px;
+    margin-left: 600px;
+    margin-top: 100px;
+}
+
+#description {
+    width: 400px;
+    height: 400px;
+}
